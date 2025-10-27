@@ -1,0 +1,4 @@
+# SDKMAN configuration for this project
+# Use SDKMAN to install/select the exact java candidate if you use SDKMAN locally.
+# The identifier below works for Temurin builds; run `sdk list java` if it needs adjusting.
+java=17.0.16-tem
