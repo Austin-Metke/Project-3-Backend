@@ -2,7 +2,7 @@
 * Command to run app: ./gradlew bootRun
 * How to it stop completely: ./gradlew --stop
 * How to run the test: ./gradlew test
-* Clean App: ./gradlew clean ./gradlew buildjava 
+* Clean App: ./gradlew clean ./gradlew build 
 
 # how to install java 17
 java -version

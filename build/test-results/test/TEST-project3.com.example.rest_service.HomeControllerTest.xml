@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="project3.com.example.rest_service.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T22:25:08.290Z" hostname="codespaces-15ab31" time="0.804">
+<testsuite name="project3.com.example.rest_service.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-28T16:45:52.318Z" hostname="codespaces-0ca638" time="0.778">
   <properties/>
-  <testcase name="homeReturnsWelcomeMessage()" classname="project3.com.example.rest_service.HomeControllerTest" time="0.804"/>
-  <system-out><![CDATA[22:25:06.240 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [project3.com.example.rest_service.HomeControllerTest]: HomeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:25:06.437 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration project3.com.example.rest_service.RestServiceApplication for test class project3.com.example.rest_service.HomeControllerTest
+  <testcase name="homeReturnsWelcomeMessage()" classname="project3.com.example.rest_service.HomeControllerTest" time="0.778"/>
+  <system-out><![CDATA[16:45:49.860 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [project3.com.example.rest_service.HomeControllerTest]: HomeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:45:50.082 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration project3.com.example.rest_service.RestServiceApplication for test class project3.com.example.rest_service.HomeControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,12 +14,12 @@
 
  :: Spring Boot ::                (v3.5.7)
 
-2025-10-27T22:25:06.958Z  INFO 11124 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Starting HomeControllerTest using Java 17.0.16 with PID 11124 (started by codespace in /workspaces/Project-3-Backend)
-2025-10-27T22:25:06.964Z  INFO 11124 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2025-10-27T22:25:08.228Z  INFO 11124 --- [rest-service] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-10-27T22:25:08.228Z  INFO 11124 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-10-27T22:25:08.232Z  INFO 11124 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2025-10-27T22:25:08.273Z  INFO 11124 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Started HomeControllerTest in 1.771 seconds (process running for 3.606)
+2025-10-28T16:45:50.776Z  INFO 4661 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Starting HomeControllerTest using Java 17.0.16 with PID 4661 (started by vscode in /workspaces/Project-3-Backend)
+2025-10-28T16:45:50.779Z  INFO 4661 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T16:45:52.271Z  INFO 4661 --- [rest-service] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-28T16:45:52.272Z  INFO 4661 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-28T16:45:52.276Z  INFO 4661 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-28T16:45:52.312Z  INFO 4661 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Started HomeControllerTest in 2.107 seconds (process running for 4.058)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
