@@ -1,5 +1,4 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Main-Class: org.springframework.boot.loader.launch.JarLauncher
 Start-Class: project3.com.example.rest_service.RestServiceApplication
 Spring-Boot-Version: 3.5.7
@@ -10,6 +9,4 @@ Spring-Boot-Layers-Index: BOOT-INF/layers.idx
 Build-Jdk-Spec: 17
 Implementation-Title: rest-service
 Implementation-Version: 0.0.1-SNAPSHOT
-=======
->>>>>>> main
 
