@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="project3.com.example.rest_service.RestServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-31T21:23:53.708Z" hostname="austin-hplaptop15zef2xxx" time="0.008">
+  <properties/>
+  <testcase name="contextLoads()" classname="project3.com.example.rest_service.RestServiceApplicationTests" time="0.008"/>
+  <system-out><![CDATA[2025-10-31T14:23:52.800-07:00  INFO 332703 --- [rest-service] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [project3.com.example.rest_service.RestServiceApplicationTests]: RestServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-31T14:23:52.808-07:00  INFO 332703 --- [rest-service] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration project3.com.example.rest_service.RestServiceApplication for test class project3.com.example.rest_service.RestServiceApplicationTests
+2025-10-31T14:23:52.825-07:00  INFO 332703 --- [rest-service] [    Test worker] m.p.springdotenv.DotenvPropertySource    : Initialized Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-10-31T14:23:52.860-07:00  INFO 332703 --- [rest-service] [    Test worker] p.c.e.r.RestServiceApplicationTests      : Starting RestServiceApplicationTests using Java 17.0.16 with PID 332703 (started by austinm in /home/austinm/development/Project-3-Backend)
+2025-10-31T14:23:52.861-07:00  INFO 332703 --- [rest-service] [    Test worker] p.c.e.r.RestServiceApplicationTests      : The following 1 profile is active: "test"
+2025-10-31T14:23:53.082-07:00  INFO 332703 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T14:23:53.091-07:00  INFO 332703 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-10-31T14:23:53.241-07:00  INFO 332703 --- [rest-service] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T14:23:53.244-07:00  INFO 332703 --- [rest-service] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T14:23:53.258-07:00  INFO 332703 --- [rest-service] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T14:23:53.260-07:00  INFO 332703 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-31T14:23:53.262-07:00  INFO 332703 --- [rest-service] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-10-31T14:23:53.262-07:00  INFO 332703 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-31T14:23:53.264-07:00  INFO 332703 --- [rest-service] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T14:23:53.298-07:00  INFO 332703 --- [rest-service] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T14:23:53.302-07:00  INFO 332703 --- [rest-service] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T14:23:53.373-07:00  WARN 332703 --- [rest-service] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T14:23:53.431-07:00  INFO 332703 --- [rest-service] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T14:23:53.705-07:00  INFO 332703 --- [rest-service] [    Test worker] p.c.e.r.RestServiceApplicationTests      : Started RestServiceApplicationTests in 0.89 seconds (process running for 7.56)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
