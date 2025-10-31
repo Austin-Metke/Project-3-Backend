@@ -73,6 +73,21 @@ public class UserController {
                     .body(Map.of("message", "Email already registered"));
         }
 
+        if (newUser.getPasswordHash() == null || newUser.getPasswordHash().isBlank()) {
+            return ResponseEntity.badRequest()
+                    .body(Map.of("message", "Password is required"));
+        }
+
+        if (newUser.getEmail() == null || newUser.getEmail().isBlank()) {
+            return ResponseEntity.badRequest()
+                    .body(Map.of("message", "Email is required"));
+        }
+
+        if (newUser.getName() == null || newUser.getName().isBlank()) {
+            return ResponseEntity.badRequest()
+                    .body(Map.of("message", "Username is required"));
+        }
+
         newUser.setPasswordHash(passwordEncoder.encode(newUser.getPasswordHash()));
         User savedUser = repository.save(newUser);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
