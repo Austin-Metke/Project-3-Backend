@@ -1,26 +1,51 @@
-name: Ensure Java 17
+name: CI - Java 17.0.6
 
 on:
   push:
-    branches: ['**']
+    branches: [ "**" ]
   pull_request:
-    branches: ['**']
+    branches: [ "**" ]
+
+permissions:
+  contents: read
 
 jobs:
-  verify-java:
+  build:
+    name: Build & Test (Temurin 17.0.6)
     runs-on: ubuntu-latest
+
+    env:
+      CI: true
+      SPRING_PROFILES_ACTIVE: test  # ensure test-safe config is used
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java 17.0.16 (Temurin)
+      - name: Set up JDK 17.0.6 (Temurin)
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17.0.16'
+          distribution: temurin
+          java-version: '17.0.6'
+          cache: gradle
 
-      - name: Show java
-        run: java -version
+      - name: Verify Java version
+        run: |
+          java -version
+          javac -version
 
-      - name: Build with Gradle
-        run: ./gradlew --no-daemon build
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Build & test
+        run: ./gradlew clean build --no-daemon
+
+      - name: Publish test report (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: |
+            **/build/reports/tests/test/**
+            **/build/test-results/test/**
+          if-no-files-found: ignore
