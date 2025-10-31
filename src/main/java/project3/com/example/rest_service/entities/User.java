@@ -1,7 +1,15 @@
 package project3.com.example.rest_service.entities;
 
-import jakarta.persistence.*;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
@@ -18,7 +26,8 @@ public class User {
     @Column(name = "email", length = 144, nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password_hash", length = 72, nullable = false)
+    @Column(name = "password_hash", length = 80, nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Prevents password hash from being sent in JSON response
     private String passwordHash;
 
     @Column(name = "google_id", length = 1000, unique = true)
