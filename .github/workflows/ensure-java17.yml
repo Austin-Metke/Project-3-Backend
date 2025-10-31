@@ -1,32 +1,32 @@
-name: CI - Java 17.0.6
+name: CI - Java 17.0.16
 
 on:
   push:
-    branches: [ "**" ]
+    branches: ["**"]
   pull_request:
-    branches: [ "**" ]
+    branches: ["**"]
 
 permissions:
   contents: read
 
 jobs:
   build:
-    name: Build & Test (Temurin 17.0.6)
+    name: Build & Test (Temurin 17.0.16)
     runs-on: ubuntu-latest
 
     env:
       CI: true
-      SPRING_PROFILES_ACTIVE: test  # ensure test-safe config is used
+      SPRING_PROFILES_ACTIVE: test  # ensures test-safe config
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17.0.6 (Temurin)
+      - name: Set up JDK 17.0.16 (Temurin)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17.0.6'
+          java-version: '17.0.16'
           cache: gradle
 
       - name: Verify Java version
@@ -37,10 +37,10 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Build & test
+      - name: Build & Test
         run: ./gradlew clean build --no-daemon
 
-      - name: Publish test report (always)
+      - name: Upload test reports (always)
         if: always()
         uses: actions/upload-artifact@v4
         with:
