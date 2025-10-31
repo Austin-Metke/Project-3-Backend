@@ -1,2 +1,83 @@
-# dotenv
+########################################
+# Java / Spring Boot
+########################################
+*.class
+*.log
+*.ctxt
+*.tmp
+*.swp
+*.swo
+hs_err_pid*
+replay_pid*
+
+# Build output
+/build/
+out/
+target/
+
+# Spring Boot environment files
+# Keep default config templates tracked,
+# but ignore local / environment-specific overrides
+!src/main/**/application.properties
+!src/main/**/application.yml
+!src/main/**/application.yaml
+application-*.properties
+application-*.yml
+application-*.yaml
+
+# Local environment / secrets
 .env
+*.env
+.env.*
+*.local
+*.profile
+
+# Embedded databases
+*.h2.db
+*.mv.db
+*.trace.db
+
+########################################
+# Gradle
+########################################
+.gradle/
+build/
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+!gradlew
+!gradlew.bat
+
+########################################
+# IntelliJ IDEA
+########################################
+.idea/
+*.iws
+*.iml
+*.ipr
+# IntelliJ build output
+out/
+
+########################################
+# VS Code
+########################################
+.vscode/
+.history/
+*.code-workspace
+
+########################################
+# Operating System Files
+########################################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux / generic temp
+*~
+*.bak
+*.orig
