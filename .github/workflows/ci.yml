@@ -6,22 +6,42 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CI: true
+      SPRING_PROFILES_ACTIVE: test
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up JDK 17.0.16
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v2
+
+      - name: Set up JDK 17.0.16 (Temurin)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17.0.16'
-          cache: 'gradle'
+          cache: gradle
 
       - name: Ensure Gradle wrapper is executable
         run: chmod +x ./gradlew
 
-      - name: Build
+      - name: Build & Test
         run: ./gradlew clean build --no-daemon
+
+      - name: Upload test reports (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: |
+            **/build/reports/tests/test/**
+            **/build/test-results/test/**
+          if-no-files-found: ignore
