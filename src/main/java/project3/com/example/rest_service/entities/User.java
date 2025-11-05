@@ -33,6 +33,16 @@ public class User {
     @Column(name = "google_id", length = 1000, unique = true)
     private String googleID;
 
+    public User(String name, String email, String passwordHash) {
+        this.name = name;
+        this.email = email;
+        this.passwordHash = passwordHash;
+    }
+
+    public User() {
+        //TODO Auto-generated constructor stub
+    }
+
     // Getters and Setters
     public Integer getId() {
         return id;
