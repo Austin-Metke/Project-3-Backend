@@ -1,8 +1,8 @@
-name: CI - Java 17.0.16
+name: CI
 
 on:
   push:
-    branches: ["**"]
+    branches: ["**"]         # run on all branches (including feature branches)
   pull_request:
     branches: ["**"]
 
@@ -16,7 +16,7 @@ jobs:
 
     env:
       CI: true
-      SPRING_PROFILES_ACTIVE: test  # ensures test-safe config
+      SPRING_PROFILES_ACTIVE: test   # ensure test profile is used
 
     steps:
       - name: Checkout
@@ -42,6 +42,7 @@ jobs:
 
       - name: Upload test reports (always)
         if: always()
+        continue-on-error: true       # <-- prevents network flakiness from failing CI
         uses: actions/upload-artifact@v4
         with:
           name: test-reports

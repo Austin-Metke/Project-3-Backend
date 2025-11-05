@@ -6,7 +6,11 @@
 
 # how to install java 17
 java -version
+
 sudo apt update
+
 sudo apt install -y openjdk-17-jdk
+
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 export PATH="$JAVA_HOME/bin:$PATH"

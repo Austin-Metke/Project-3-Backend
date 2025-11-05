@@ -45,11 +45,8 @@ class UserControllerTest {
     PasswordEncoder passwordEncoder;
 
     private User user(Integer id, String name, String email, String pwHash) {
-        User u = new User();
+        User u = new User(name, email, pwHash);
         u.setId(id);
-        u.setName(name);
-        u.setEmail(email);
-        u.setPasswordHash(pwHash);
         return u;
     }
 
