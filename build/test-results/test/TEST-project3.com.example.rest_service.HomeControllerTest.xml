@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="project3.com.example.rest_service.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-04T01:00:46.467Z" hostname="JESUS2025" time="0.159">
+<testsuite name="project3.com.example.rest_service.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-04T20:55:14.304Z" hostname="austin-hplaptop15zef2xxx" time="0.135">
   <properties/>
-  <testcase name="homeReturnsWelcomeMessage()" classname="project3.com.example.rest_service.HomeControllerTest" time="0.159"/>
-  <system-out><![CDATA[17:00:37.446 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [project3.com.example.rest_service.HomeControllerTest]: HomeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:00:37.682 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration project3.com.example.rest_service.RestServiceApplication for test class project3.com.example.rest_service.HomeControllerTest
+  <testcase name="homeReturnsWelcomeMessage()" classname="project3.com.example.rest_service.HomeControllerTest" time="0.135"/>
+  <system-out><![CDATA[12:55:02.733 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [project3.com.example.rest_service.HomeControllerTest]: HomeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:55:03.043 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration project3.com.example.rest_service.RestServiceApplication for test class project3.com.example.rest_service.HomeControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,19 +14,19 @@
 
  :: Spring Boot ::                (v3.5.7)
 
-2025-11-03T17:00:38.190-08:00  INFO 26996 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Starting HomeControllerTest using Java 17.0.16 with PID 26996 (started by garci in C:\Users\garci\Downloads\Project-3-Backend)
-2025-11-03T17:00:38.190-08:00  INFO 26996 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : The following 1 profile is active: "test"
-2025-11-03T17:00:39.360-08:00  INFO 26996 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-03T17:00:39.448-08:00  INFO 26996 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
-2025-11-03T17:00:42.695-08:00  INFO 26996 --- [rest-service] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-03T17:00:42.879-08:00  INFO 26996 --- [rest-service] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
-2025-11-03T17:00:42.979-08:00  INFO 26996 --- [rest-service] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-03T17:00:43.211-08:00  INFO 26996 --- [rest-service] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-03T17:00:43.243-08:00  INFO 26996 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-03T17:00:43.523-08:00  INFO 26996 --- [rest-service] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-11-03T17:00:43.523-08:00  INFO 26996 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-03T17:00:43.571-08:00  WARN 26996 --- [rest-service] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-03T17:00:43.620-08:00  INFO 26996 --- [rest-service] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-11-04T12:55:04.143-08:00  INFO 424981 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Starting HomeControllerTest using Java 17.0.16 with PID 424981 (started by austinm in /home/austinm/development/Project-3-Backend)
+2025-11-04T12:55:04.147-08:00  INFO 424981 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : The following 1 profile is active: "test"
+2025-11-04T12:55:05.625-08:00  INFO 424981 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-04T12:55:05.782-08:00  INFO 424981 --- [rest-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2025-11-04T12:55:08.906-08:00  INFO 424981 --- [rest-service] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-04T12:55:09.044-08:00  INFO 424981 --- [rest-service] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-04T12:55:09.127-08:00  INFO 424981 --- [rest-service] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-04T12:55:09.391-08:00  INFO 424981 --- [rest-service] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-04T12:55:09.454-08:00  INFO 424981 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-04T12:55:09.859-08:00  INFO 424981 --- [rest-service] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-04T12:55:09.864-08:00  INFO 424981 --- [rest-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-04T12:55:09.922-08:00  WARN 424981 --- [rest-service] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-04T12:55:09.997-08:00  INFO 424981 --- [rest-service] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -34,13 +34,13 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-11-03T17:00:44.498-08:00  INFO 26996 --- [rest-service] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-03T17:00:44.562-08:00  INFO 26996 --- [rest-service] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-03T17:00:45.555-08:00  INFO 26996 --- [rest-service] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-11-03T17:00:46.389-08:00  INFO 26996 --- [rest-service] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-11-03T17:00:46.389-08:00  INFO 26996 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-11-03T17:00:46.389-08:00  INFO 26996 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-11-03T17:00:46.437-08:00  INFO 26996 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Started HomeControllerTest in 8.607 seconds (process running for 10.051)
+2025-11-04T12:55:12.232-08:00  INFO 424981 --- [rest-service] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-04T12:55:12.371-08:00  INFO 424981 --- [rest-service] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-04T12:55:13.319-08:00  INFO 424981 --- [rest-service] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-04T12:55:14.225-08:00  INFO 424981 --- [rest-service] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-04T12:55:14.226-08:00  INFO 424981 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-04T12:55:14.228-08:00  INFO 424981 --- [rest-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-11-04T12:55:14.283-08:00  INFO 424981 --- [rest-service] [    Test worker] p.c.e.rest_service.HomeControllerTest    : Started HomeControllerTest in 10.905 seconds (process running for 13.225)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
