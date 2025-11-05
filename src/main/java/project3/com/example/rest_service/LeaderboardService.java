@@ -1,15 +1,19 @@
 package project3.com.example.rest_service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LeaderboardService {
 
     public enum Range {
-        WEEK, MONTH, SIX_MONTHS, YEAR, ALL_TIME
+        WEEK,
+        MONTH,
+        SIX_MONTHS,
+        YEAR,
+        ALL_TIME
     }
 
     private final LeaderboardRepository repo;
@@ -19,14 +23,15 @@ public class LeaderboardService {
     }
 
     public List<LeaderboardEntry> getLeaderboard(Range range, int limit) {
-        var pageable = PageRequest.of(0, limit);
-
-        return switch (range) {
-            case WEEK       -> repo.weekly(pageable);
-            case MONTH      -> repo.monthly(pageable);
-            case SIX_MONTHS -> repo.lastSixMonths(pageable);
-            case YEAR       -> repo.yearly(pageable);
-            case ALL_TIME   -> repo.allTime(pageable);
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime start = switch (range) {
+            case WEEK       -> now.minusWeeks(1);
+            case MONTH      -> now.minusMonths(1);
+            case SIX_MONTHS -> now.minusMonths(6);
+            case YEAR       -> now.minusYears(1);
+            case ALL_TIME   -> null;  // no lower bound
         };
+
+        return repo.leaderboardSince(start, limit);
     }
 }
