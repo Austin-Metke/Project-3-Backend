@@ -1,9 +1,12 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Services;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import project3.com.example.rest_service.LeaderboardEntry;
+import project3.com.example.rest_service.Repositories.LeaderboardRepository;
 
 @Service
 public class LeaderboardService {

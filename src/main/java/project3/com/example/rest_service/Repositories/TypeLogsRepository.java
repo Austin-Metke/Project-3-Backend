@@ -1,4 +1,4 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Repositories;
 
 import java.util.List;
 

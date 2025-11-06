@@ -1,8 +1,11 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Services;
 
 import org.springframework.stereotype.Service;
 import project3.com.example.rest_service.entities.TypeLogs;
 import project3.com.example.rest_service.entities.User;
+import project3.com.example.rest_service.Repositories.TypeActivityRepository;
+import project3.com.example.rest_service.Repositories.TypeLogsRepository;
+import project3.com.example.rest_service.Repositories.UserRepository;
 import project3.com.example.rest_service.entities.TypeActivity;
 
 import java.util.List;

@@ -10,7 +10,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 class RestServiceApplicationTests {
 
     @MockitoBean
-    private project3.com.example.rest_service.TypeLogsService typeLogsService;
+    private project3.com.example.rest_service.Services.TypeLogsService typeLogsService;
 
     @Test
     void contextLoads() {

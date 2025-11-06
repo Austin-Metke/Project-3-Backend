@@ -1,4 +1,4 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Repositories;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import project3.com.example.rest_service.LeaderboardEntry;
 import project3.com.example.rest_service.entities.TypeLogs;
 
 public interface LeaderboardRepository extends JpaRepository<TypeLogs, Integer> {

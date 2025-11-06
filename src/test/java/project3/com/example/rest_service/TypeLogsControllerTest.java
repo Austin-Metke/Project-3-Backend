@@ -10,6 +10,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import project3.com.example.rest_service.Controllers.TypeLogsController;
+import project3.com.example.rest_service.Services.TypeLogsService;
 import project3.com.example.rest_service.entities.TypeLogs;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Controllers;
 
 import java.util.List;
 import java.util.Map;
@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import project3.com.example.rest_service.Repositories.TypeActivityRepository;
 import project3.com.example.rest_service.entities.TypeActivity;
 
 @RestController
