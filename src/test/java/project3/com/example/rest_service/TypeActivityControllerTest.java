@@ -10,6 +10,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import project3.com.example.rest_service.Controllers.TypeActivityController;
+import project3.com.example.rest_service.Repositories.TypeActivityRepository;
 import project3.com.example.rest_service.entities.TypeActivity;
 
 import java.math.BigDecimal;

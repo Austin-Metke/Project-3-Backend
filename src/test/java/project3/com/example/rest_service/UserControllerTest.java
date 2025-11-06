@@ -27,6 +27,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import project3.com.example.rest_service.Controllers.UserController;
+import project3.com.example.rest_service.Repositories.UserRepository;
 import project3.com.example.rest_service.entities.User;
 
 @WebMvcTest(UserController.class)

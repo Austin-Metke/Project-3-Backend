@@ -1,8 +1,14 @@
-package project3.com.example.rest_service;
+package project3.com.example.rest_service.Controllers;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import project3.com.example.rest_service.LeaderboardEntry;
+import project3.com.example.rest_service.Services.LeaderboardService;
 
 @RestController
 @RequestMapping("/leaderboard")
