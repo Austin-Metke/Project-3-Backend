@@ -7,7 +7,10 @@
 # Project-3-Backend
 
 Quick commands
-- Run app: ```sh ./gradlew bootRun ```
+- Run app: 
+```sh 
+./gradlew bootRun 
+```
 - Stop Gradle daemons: ./gradlew --stop
 - Run tests: ./gradlew test
 - Clean & build: ./gradlew clean && ./gradlew build
