@@ -97,6 +97,7 @@ GET    /challenges
 ```
 ``` text
 GET    /challenges/{id}
+```
 ```text
 GET    /challenges/user/{userId}
 ```
