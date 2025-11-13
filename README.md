@@ -94,11 +94,15 @@ GET    /
 ```sh
 java -version
 ```
+```sh
 sudo apt update
+```
 ```sh
 sudo apt install -y openjdk-17-jdk
 ```
+```sh
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+```
 ```sh
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
