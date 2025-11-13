@@ -23,73 +23,151 @@ Quick commands
 # Routes (click the copy button next to any route to copy that single line)
 Here is all the routes for this API
 ## UserController (class-level prefix /auth) — 6 routes:
-```text
-GET    /auth
-```
+[`project3.com.example.rest_service.Controllers.UserController`](src/main/java/project3/com/example/rest_service/Controllers/UserController.java)
 
-```text
-GET    /auth/{id}
-```
+- GET /auth
+  - Description: Returns all users as a HATEOAS collection (DTOs).
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/auth
+    ```
 
-```text
-POST   /auth/register
-```
+- GET /auth/{id}
+  - Description: Returns a single user DTO by id (404 if missing).
+  - Example:
+    ```sh
+    curl -i http://localhost:8080/auth/10
+    ```
 
-```text
-PUT    /auth/update/{id}
-```
+- POST /auth/register
+  - Description: Create a new user. Request body: RegisterRequestDto { name, email, password }.
+  - Example:
+    ```sh
+    curl -i -X POST http://localhost:8080/auth/register \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Erin","email":"erin@example.com","password":"plainpw"}'
+    ```
+  - See DTO: [project3.com.example.rest_service.dto.RegisterRequestDto](http://_vscodecontentref_/0)
 
-```text
-DELETE /auth/delete/{id}
-```
+- PUT /auth/update/{id}
+  - Description: Update an existing user (optional fields: name,email,password). Returns 404 if user not found.
+  - Example:
+    ```sh
+    curl -i -X PUT http://localhost:8080/auth/update/5 \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Frank New","email":"frank@new.com","password":"newpw"}'
+    ```
+  - See DTO: [project3.com.example.rest_service.dto.UpdateUserDto](http://_vscodecontentref_/1)
 
-```text
-POST   /auth/login
-```
+- DELETE /auth/delete/{id}
+  - Description: Delete a user by id. Returns 204 when deleted.
+  - Example:
+    ```sh
+    curl -i -X DELETE http://localhost:8080/auth/delete/42
+    ```
+
+- POST /auth/login
+  - Description: Authenticate a user. Request body: LoginRequestDto { name, password }. Returns user DTO on success.
+  - Example:
+    ```sh
+    curl -i -X POST http://localhost:8080/auth/login \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Henry","password":"plain"}'
+    ```
+  - See DTO: [project3.com.example.rest_service.dto.LoginRequestDto](http://_vscodecontentref_/2)
+
 ## TypeLogsController (prefix /activity-logs) — 6 routes:
-```text
-GET    /activity-logs
-```
+[project3.com.example.rest_service.Controllers.TypeLogsController](http://_vscodecontentref_/3)
 
-```text
-GET    /activity-logs/{id}
-```
+- GET /activity-logs
+  - Description: Return all activity logs.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/activity-logs
+    ```
 
-```text
-GET    /activity-logs/user/{userId}
-```
+- GET /activity-logs/{id}
+  - Description: Return a single activity log (404 if not found).
+  - Example:
+    ```sh
+    curl -i http://localhost:8080/activity-logs/1
+    ```
 
-```text
-GET    /activity-logs/activity/{activityTypeId}
-```
+- GET /activity-logs/user/{userId}
+  - Description: Return logs for a specific user.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/activity-logs/user/2
+    ```
 
-```text
-POST   /activity-logs
-```
+- GET /activity-logs/activity/{activityTypeId}
+  - Description: Return logs for a specific activity type.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/activity-logs/activity/2
+    ```
 
-```text
-DELETE /activity-logs/{id}
-```
+- POST /activity-logs
+  - Description: Create a new activity log. Body: ActivityLogRequest { userId, activityTypeId, occurredAt? }.
+  - Example:
+    ```sh
+    curl -i -X POST http://localhost:8080/activity-logs \
+      -H "Content-Type: application/json" \
+      -d '{"userId":2,"activityTypeId":2,"occurredAt":"2025-01-01T00:00:00Z"}'
+    ```
+  - See request class: [project3.com.example.rest_service.ActivityLogRequest](http://_vscodecontentref_/4)
+  - Backing service: [project3.com.example.rest_service.Services.TypeLogsService](http://_vscodecontentref_/5)
+
+- DELETE /activity-logs/{id}
+  - Description: Delete an activity log by id (404 if missing).
+  - Example:
+    ```sh
+    curl -i -X DELETE http://localhost:8080/activity-logs/99
+    ```
+
 ## TypeActivityController (prefix /activities) — 5 routes:
-```text
-GET    /activities
-```
+[project3.com.example.rest_service.Controllers.TypeActivityController](http://_vscodecontentref_/6)
 
-```text
-GET    /activities/{id}
-```
+- GET /activities
+  - Description: Return all activity types.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/activities
+    ```
 
-```text
-POST   /activities
-```
+- GET /activities/{id}
+  - Description: Return a single activity type (404 if missing).
+  - Example:
+    ```sh
+    curl -i http://localhost:8080/activities/1
+    ```
 
-```text
-PUT    /activities/{id}
-```
+- POST /activities
+  - Description: Create a new activity type. Body: { name, points, co2gSaved }.
+  - Example:
+    ```sh
+    curl -i -X POST http://localhost:8080/activities \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Cycling","points":10,"co2gSaved":50.0}'
+    ```
 
-```text
-DELETE /activities/{id}
-```
+- PUT /activities/{id}
+  - Description: Replace or create activity type at id.
+  - Example:
+    ```sh
+    curl -i -X PUT http://localhost:8080/activities/3 \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Walking","points":5,"co2gSaved":10.0}'
+    ```
+
+- DELETE /activities/{id}
+  - Description: Delete activity type by id (404 if missing).
+  - Example:
+    ```sh
+    curl -i -X DELETE http://localhost:8080/activities/123
+    ```
+  - Repository: [project3.com.example.rest_service.Repositories.TypeActivityRepository](http://_vscodecontentref_/7)
+
 
 ## ChallengesController (class-level prefix /challenges) — 6 routes:
 ```text
@@ -111,14 +189,25 @@ PUT    /challenges/{id}
 DELETE /challenges/{id}
 ```
 ## LeaderboardController (prefix /leaderboard) — 1 route:
-```text
-GET    /leaderboard
-```
-## HomeController — 1 route:
-```text
-GET    /
-```
 
+
+- GET /leaderboard
+  - Description: Return leaderboard entries. Query params: range (WEEK|MONTH|SIX_MONTHS|YEAR|ALL_TIME), limit
+  - Example:
+    ```sh
+    curl -sS 'http://localhost:8080/leaderboard?range=ALL_TIME&limit=10'
+    ```
+  - Service: 
+
+## HomeController — 1 route:
+
+
+- GET /
+  - Description: Health / welcome endpoint returning "Welcome to EcoPoint API"
+  - Example:
+    ```sh
+    curl http://localhost:8080/
+    ```
 # Notes
 - The routes above are implemented in the controller classes listed below.
 
