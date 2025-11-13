@@ -3,8 +3,31 @@
 * How to it stop completely: ./gradlew --stop
 * How to run the test: ./gradlew test
 * Clean App: ./gradlew clean ./gradlew build 
+# end point
+GET    /auth
+GET    /auth/{id}
+POST   /auth/register
+PUT    /auth/update/{id}
+DELETE /auth/delete/{id}
+POST   /auth/login
 
-# how to install java 17
+GET    /activity-logs
+GET    /activity-logs/{id}
+GET    /activity-logs/user/{userId}
+GET    /activity-logs/activity/{activityTypeId}
+POST   /activity-logs
+DELETE /activity-logs/{id}
+
+GET    /activities
+GET    /activities/{id}
+POST   /activities
+PUT    /activities/{id}
+DELETE /activities/{id}
+
+GET    /leaderboard
+
+GET    /
+## how to install java 17
 java -version
 
 sudo apt update
