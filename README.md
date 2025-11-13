@@ -3,30 +3,7 @@
 * How to it stop completely: ./gradlew --stop
 * How to run the test: ./gradlew test
 * Clean App: ./gradlew clean ./gradlew build 
-# end point
-GET    /auth
-GET    /auth/{id}
-POST   /auth/register
-PUT    /auth/update/{id}
-DELETE /auth/delete/{id}
-POST   /auth/login
 
-GET    /activity-logs
-GET    /activity-logs/{id}
-GET    /activity-logs/user/{userId}
-GET    /activity-logs/activity/{activityTypeId}
-POST   /activity-logs
-DELETE /activity-logs/{id}
-
-GET    /activities
-GET    /activities/{id}
-POST   /activities
-PUT    /activities/{id}
-DELETE /activities/{id}
-
-GET    /leaderboard
-
-GET    /// ...existing code...
 # Project-3-Backend
 
 Quick commands
@@ -35,30 +12,81 @@ Quick commands
 - Run tests: ./gradlew test
 - Clean & build: ./gradlew clean && ./gradlew build
 
-Routes (click the copy button on the right of the box to copy)
+Routes (click the copy button next to any route to copy that single line)
+
 ```text
 GET    /auth
+```
+
+```text
 GET    /auth/{id}
+```
+
+```text
 POST   /auth/register
+```
+
+```text
 PUT    /auth/update/{id}
+```
+
+```text
 DELETE /auth/delete/{id}
+```
+
+```text
 POST   /auth/login
+```
 
+```text
 GET    /activity-logs
+```
+
+```text
 GET    /activity-logs/{id}
+```
+
+```text
 GET    /activity-logs/user/{userId}
+```
+
+```text
 GET    /activity-logs/activity/{activityTypeId}
+```
+
+```text
 POST   /activity-logs
+```
+
+```text
 DELETE /activity-logs/{id}
+```
 
+```text
 GET    /activities
+```
+
+```text
 GET    /activities/{id}
+```
+
+```text
 POST   /activities
+```
+
+```text
 PUT    /activities/{id}
+```
+
+```text
 DELETE /activities/{id}
+```
 
+```text
 GET    /leaderboard
+```
 
+```text
 GET    /
 ```
 
