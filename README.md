@@ -170,24 +170,74 @@ Here is all the routes for this API
 
 
 ## ChallengesController (class-level prefix /challenges) — 6 routes:
-```text
-GET    /challenges
-```
-``` text
-GET    /challenges/{id}
-```
-```text
-GET    /challenges/user/{userId}
-```
-```text
-POST   /challenges
-```
-```text
-PUT    /challenges/{id}
-```
-```text
-DELETE /challenges/{id}
-```
+- Description: Endpoints to manage challenges (create, read, update, delete, and list by user). These routes are shown as the API design; if the controller is implemented, it should follow the shapes and status codes shown below.
+
+- GET /challenges
+  - Description: Return a list of challenges.
+  - Success: 200 OK with JSON array of challenge objects.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/challenges
+    ```
+
+- GET /challenges/{id}
+  - Description: Return a single challenge by id.
+  - Success: 200 OK with challenge JSON.
+  - Not found: 404 Not Found.
+  - Example:
+    ```sh
+    curl -i http://localhost:8080/challenges/123
+    ```
+
+- GET /challenges/user/{userId}
+  - Description: Return challenges that a specific user is participating in (or created by).
+  - Success: 200 OK with JSON array.
+  - Example:
+    ```sh
+    curl -sS http://localhost:8080/challenges/user/42
+    ```
+
+- POST /challenges
+  - Description: Create a new challenge.
+  - Request body (example JSON):
+    ```json
+    {
+      "name": "Plastic-Free Week",
+      "description": "Avoid single-use plastics for one week",
+      "startDate": "2025-06-01",
+      "endDate": "2025-06-07",
+      "createdByUserId": 5
+    }
+    ```
+  - Success: 201 Created with Location header pointing to the new resource and body containing created challenge.
+  - Validation failure: 400 Bad Request.
+  - Example:
+    ```sh
+    curl -i -X POST http://localhost:8080/challenges \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Plastic-Free Week","description":"Avoid single-use plastics","startDate":"2025-06-01","endDate":"2025-06-07","createdByUserId":5}'
+    ```
+
+- PUT /challenges/{id}
+  - Description: Update an existing challenge (partial or full replace depending on implementation).
+  - Request body: same shape as POST; fields may be optional for partial updates.
+  - Success: 200 OK with updated challenge.
+  - Not found: 404 Not Found.
+  - Example:
+    ```sh
+    curl -i -X PUT http://localhost:8080/challenges/123 \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Updated Challenge Name"}'
+    ```
+
+- DELETE /challenges/{id}
+  - Description: Delete a challenge by id.
+  - Success: 204 No Content.
+  - Not found: 404 Not Found.
+  - Example:
+    ```sh
+    curl -i -X DELETE http://localhost:8080/challenges/123
+    ```
 ## LeaderboardController (prefix /leaderboard) — 1 route:
 
 
