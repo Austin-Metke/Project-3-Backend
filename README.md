@@ -7,7 +7,7 @@
 # Project-3-Backend
 
 Quick commands
-- Run app: ./gradlew bootRun
+- Run app: ```sh ./gradlew bootRun ```
 - Stop Gradle daemons: ./gradlew --stop
 - Run tests: ./gradlew test
 - Clean & build: ./gradlew clean && ./gradlew build
@@ -90,6 +90,17 @@ GET    /leaderboard
 GET    /
 ```
 
+# Notes
+- The routes above are implemented in the controller classes listed below.
+
+# Controllers (open these files)
+- [`project3.com.example.rest_service.Controllers.UserController`](src/main/java/project3/com/example/rest_service/Controllers/UserController.java)
+- [`project3.com.example.rest_service.Controllers.TypeLogsController`](src/main/java/project3/com/example/rest_service/Controllers/TypeLogsController.java)
+- [`project3.com.example.rest_service.Controllers.TypeActivityController`](src/main/java/project3/com/example/rest_service/Controllers/TypeActivityController.java)
+- [`project3.com.example.rest_service.Controllers.LeaderboardController`](src/main/java/project3/com/example/rest_service/Controllers/LeaderboardController.java)
+- [`project3.com.example.rest_service.Controllers.HomeController`](src/main/java/project3/com/example/rest_service/Controllers/HomeController.java)
+
+
 ## how to install java 17
 ```sh
 java -version
@@ -106,13 +117,3 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ```sh
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
-# Notes
-- The routes above are implemented in the controller classes listed below.
-
-# Controllers (open these files)
-- [`project3.com.example.rest_service.Controllers.UserController`](src/main/java/project3/com/example/rest_service/Controllers/UserController.java)
-- [`project3.com.example.rest_service.Controllers.TypeLogsController`](src/main/java/project3/com/example/rest_service/Controllers/TypeLogsController.java)
-- [`project3.com.example.rest_service.Controllers.TypeActivityController`](src/main/java/project3/com/example/rest_service/Controllers/TypeActivityController.java)
-- [`project3.com.example.rest_service.Controllers.LeaderboardController`](src/main/java/project3/com/example/rest_service/Controllers/LeaderboardController.java)
-- [`project3.com.example.rest_service.Controllers.HomeController`](src/main/java/project3/com/example/rest_service/Controllers/HomeController.java)
-
