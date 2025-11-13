@@ -90,12 +90,16 @@ GET    /leaderboard
 GET    /
 ```
 
-How to install Java 17 (example for Debian/Ubuntu)
+## how to install java 17
 ```sh
 java -version
+```
 sudo apt update
+```sh
 sudo apt install -y openjdk-17-jdk
+```
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+```sh
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
 # Notes
@@ -107,14 +111,4 @@ export PATH="$JAVA_HOME/bin:$PATH"
 - [`project3.com.example.rest_service.Controllers.TypeActivityController`](src/main/java/project3/com/example/rest_service/Controllers/TypeActivityController.java)
 - [`project3.com.example.rest_service.Controllers.LeaderboardController`](src/main/java/project3/com/example/rest_service/Controllers/LeaderboardController.java)
 - [`project3.com.example.rest_service.Controllers.HomeController`](src/main/java/project3/com/example/rest_service/Controllers/HomeController.java)
-// ...existing code...
-## how to install java 17
-java -version
 
-sudo apt update
-
-sudo apt install -y openjdk-17-jdk
-
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-
-export PATH="$JAVA_HOME/bin:$PATH"
