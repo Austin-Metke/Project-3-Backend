@@ -11,12 +11,23 @@ Quick commands
 ```sh 
 ./gradlew bootRun 
 ```
-- Stop Gradle daemons: ./gradlew --stop
-- Run tests: ./gradlew test
-- Clean & build: ./gradlew clean && ./gradlew build
-
-Routes (click the copy button next to any route to copy that single line)
-
+- Stop Gradle daemons: 
+```sh
+./gradlew --stop
+```
+- Run tests: 
+```sh
+./gradlew test
+```
+- Clean & build: 
+```sh
+./gradlew clean 
+```
+```sh
+./gradlew build
+```
+# Routes (click the copy button next to any route to copy that single line)
+## UserController (class-level prefix /auth) — 6 routes:
 ```text
 GET    /auth
 ```
