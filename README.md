@@ -90,6 +90,25 @@ PUT    /activities/{id}
 ```text
 DELETE /activities/{id}
 ```
+
+## ChallengesController (class-level prefix /challenges) — 6 routes:
+```text
+GET    /challenges
+```
+``` text
+GET    /challenges/{id}
+```text
+GET    /challenges/user/{userId}
+```
+```text
+POST   /challenges
+```
+```text
+PUT    /challenges/{id}
+```
+```text
+DELETE /challenges/{id}
+```
 ## LeaderboardController (prefix /leaderboard) — 1 route:
 ```text
 GET    /leaderboard
