@@ -1,10 +1,4 @@
 # Project-3-Backend
-* Command to run app: ./gradlew bootRun
-* How to it stop completely: ./gradlew --stop
-* How to run the test: ./gradlew test
-* Clean App: ./gradlew clean ./gradlew build 
-
-# Project-3-Backend
 
 Quick commands
 - Run app: 
@@ -27,6 +21,7 @@ Quick commands
 ./gradlew build
 ```
 # Routes (click the copy button next to any route to copy that single line)
+Here is all the routes for this API
 ## UserController (class-level prefix /auth) — 6 routes:
 ```text
 GET    /auth
@@ -51,7 +46,7 @@ DELETE /auth/delete/{id}
 ```text
 POST   /auth/login
 ```
-
+## TypeLogsController (prefix /activity-logs) — 6 routes:
 ```text
 GET    /activity-logs
 ```
@@ -75,7 +70,7 @@ POST   /activity-logs
 ```text
 DELETE /activity-logs/{id}
 ```
-
+## TypeActivityController (prefix /activities) — 5 routes:
 ```text
 GET    /activities
 ```
@@ -95,11 +90,11 @@ PUT    /activities/{id}
 ```text
 DELETE /activities/{id}
 ```
-
+## LeaderboardController (prefix /leaderboard) — 1 route:
 ```text
 GET    /leaderboard
 ```
-
+## HomeController — 1 route:
 ```text
 GET    /
 ```
