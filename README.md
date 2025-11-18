@@ -286,3 +286,4 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ```sh
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
+test push
