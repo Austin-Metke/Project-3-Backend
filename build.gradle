@@ -38,3 +38,12 @@ tasks.named('test') {
 	useJUnitPlatform()
     systemProperty "spring.profiles.active", "test"
 }
+
+// Produce a single Spring Boot executable jar and disable the plain jar
+bootJar {
+    archiveFileName = 'app.jar'
+}
+
+tasks.named('jar') {
+    enabled = false
+}
